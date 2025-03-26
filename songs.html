@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Favorite Songs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="songs.css">
+</head>
+<body>
+    <!-- <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="music-control"> -->
+        <button id="music-toggle" class="music-btn">
+            <i class="fas fa-volume-mute"></i>
+            <audio id="background-music" loop>
+                <source src="music/background-music.mp3" type="audio/mpeg">
+            </audio>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Our Favorite Songs</h1>
+            <p class="subtitle">The soundtrack of our memories ❤️</p>
+        </div>
+
+        <div class="playlist">
+            <div class="song-card">
+                <div class="song-art">
+                    <img src="images/m2.jpg" alt="Song 1">
+                    <div class="play-btn" onclick="playSong('music/song1.mp3', this)">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-info">
+                    <h3>Perfect</h3>
+                    <p>Ed Sheeran</p>
+                    <audio class="song-audio">
+                        <source src="music/Chal Chalein.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-art">
+                    <img src="images/m3.jpg" alt="Song 2">
+                    <div class="play-btn" onclick="playSong('music/song2.mp3', this)">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-info">
+                    <h3>Ishq Hai</h3>
+                    <p>Mismatched</p>
+                    <audio class="song-audio">
+                        <source src="music/Ishq Hai .mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <div class="song-card">
+                <div class="song-art">
+                    <img src="images/m1.jpg" alt="Song 3">
+                    <div class="play-btn" onclick="playSong('music/song3.mp3', this)">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="song-info">
+                    <h3>Tere Vaaste</h3>
+                    <p>Varun Jain</p>
+                    <audio class="song-audio">
+                        <source src="music/Kehna Chave.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="gallery.html" class="nav-button">Photo Gallery</a>
+            <a href="thankyou.html" class="nav-button">Are You Happy Than click</a>
+            <!-- <a href="gift.html" class="nav-button">Your Gift</a> -->
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

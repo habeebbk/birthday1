@@ -1,0 +1,256 @@
+:root {
+    --primary-pink: #ff85a2;
+    --secondary-pink: #ffc0cb;
+    --light-pink: #fff0f3;
+    --dark-pink: #ff5c8a;
+    --accent-blue: #4169E1;
+    --white: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff85a2, #ffc0cb, #fff0f3);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(255, 92, 138, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.main-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--dark-pink);
+    margin-bottom: 2rem;
+    animation: titleFloat 3s ease-in-out infinite;
+}
+
+.heart-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.heart-icon {
+    font-size: 5rem;
+    color: var(--dark-pink);
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.message-card {
+    background: linear-gradient(135deg, rgba(255, 133, 162, 0.1), rgba(65, 105, 225, 0.1));
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+}
+
+.special-text {
+    font-size: 1.4rem;
+    color: var(--dark-pink);
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.reasons-container {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(45deg, rgba(255, 133, 162, 0.1), rgba(65, 105, 225, 0.1));
+    border-radius: 20px;
+}
+
+.reasons-container h2 {
+    text-align: center;
+    color: var(--dark-pink);
+    margin-bottom: 1.5rem;
+}
+
+.reasons-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reasons-list li {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.reasons-list li:hover {
+    transform: translateX(10px);
+}
+
+.reasons-list i {
+    color: var(--primary-pink);
+}
+
+.final-message {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.final-message p {
+    font-size: 1.3rem;
+    color: var(--accent-blue);
+}
+
+.signature {
+    font-size: 1.5rem;
+    color: var(--dark-pink);
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.nav-button {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(255, 92, 138, 0.3);
+}
+
+.nav-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 92, 138, 0.4);
+    background: linear-gradient(45deg, var(--accent-blue), var(--primary-pink));
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .message {
+        font-size: 1rem;
+    }
+    
+    .special-text {
+        font-size: 1.2rem;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+    }
+    
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer {
+    background: linear-gradient(135deg, rgba(255, 133, 162, 0.9), rgba(65, 105, 225, 0.9));
+    padding: 2rem 0;
+    margin-top: 3rem;
+    color: var(--white);
+    border-radius: 30px 30px 0 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.footer-message {
+    margin-bottom: 1.5rem;
+}
+
+.footer-quote {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.footer-heart {
+    font-size: 1.2rem;
+}
+
+.footer-heart i {
+    color: var(--white);
+    animation: heartbeat 1.5s infinite;
+}
+
+.footer-social {
+    margin: 1.5rem 0;
+}
+
+.social-icon {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1.5rem;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,222 @@
+:root {
+    --primary-pink: #ff85a2;
+    --secondary-pink: #ffc0cb;
+    --light-pink: #fff0f3;
+    --dark-pink: #ff5c8a;
+    --accent-blue: #4169E1;
+    --white: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff85a2, #ffc0cb, #fff0f3);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(255, 92, 138, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: var(--dark-pink);
+    margin-bottom: 0.5rem;
+    animation: titleFloat 3s ease-in-out infinite;
+}
+
+.subtitle {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.playlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.song-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(255, 92, 138, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 92, 138, 0.25);
+}
+
+.song-art {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.song-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.song-card:hover .song-art img {
+    transform: scale(1.1);
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.song-card:hover .play-btn {
+    opacity: 1;
+}
+
+.play-btn i {
+    color: var(--dark-pink);
+    font-size: 1.5rem;
+}
+
+.song-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.song-info h3 {
+    color: var(--dark-pink);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+}
+
+.song-info p {
+    color: var(--accent-blue);
+    margin: 0;
+    opacity: 0.8;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.nav-button {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--primary-pink), var(--dark-pink));
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(255, 92, 138, 0.3);
+}
+
+.nav-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 92, 138, 0.4);
+    background: linear-gradient(45deg, var(--accent-blue), var(--primary-pink));
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .playlist {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+/* Add after your existing animations */
+.balloon {
+    position: fixed;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    animation: float 15s linear infinite;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.balloon::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 15px;
+    background: #ccc;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon:nth-child(1) { background: var(--primary-pink); left: 5%; animation-delay: 0s; }
+.balloon:nth-child(2) { background: var(--accent-blue); left: 20%; animation-delay: 2s; }
+.balloon:nth-child(3) { background: var(--secondary-pink); left: 35%; animation-delay: 4s; }
+.balloon:nth-child(4) { background: var(--dark-pink); left: 50%; animation-delay: 6s; }
+.balloon:nth-child(5) { background: var(--primary-pink); left: 65%; animation-delay: 8s; }
+.balloon:nth-child(6) { background: var(--accent-blue); left: 80%; animation-delay: 10s; }
+.balloon:nth-child(7) { background: var(--secondary-pink); left: 95%; animation-delay: 12s; }
+
+@keyframes float {
+    0% {
+        bottom: -100px;
+        transform: translateX(0) rotate(0);
+    }
+    50% {
+        transform: translateX(40px) rotate(10deg);
+    }
+    100% {
+        bottom: 100vh;
+        transform: translateX(-40px) rotate(-10deg);
+    }
+}

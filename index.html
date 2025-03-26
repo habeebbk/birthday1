@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-control">
+        <button id="music-toggle" class="music-btn">
+            <i class="fas fa-volume-mute"></i>
+            <audio id="background-music" loop>
+                <source src="music/Ishq Hai (Official Music Video)  Mismatched Season 3  A Netflix Series.mp3" type="audio/mpeg">
+            </audio>
+        </button>
+    </div>
+
+    <div class="container welcome-container">
+        <div class="confetti-container" id="confetti-container"></div>
+        
+        <div class="birthday-card">
+            <h1 class="birthday-title">Happy Birthday!</h1>
+            <div class="birthday-message">
+                <p>Dear HASNA ❤️,</p>
+                <p>Today is all about celebrating the amazing person you are!</p>
+                <p>Wishing you a day filled with happiness and a year filled with joy.</p>
+            </div>
+            
+            <!-- <div class="countdown-timer" id="countdown">
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div> -->
+            
+            <div class="navigation-buttons">
+                <a href="gallery.html" class="nav-button">Photo Gallery</a>
+                <!-- <a href="songs.html" class="nav-button">Your Favorite Song</a> -->
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer-photos">
+        <div class="mini-photo-container">
+            <div class="mini-photo">
+                <img src="images/1.jpg" alt="Mini Photo 1">
+                <div class="mini-caption">Fun times!</div>
+            </div>
+            <div class="mini-photo">
+                <img src="images/3.jpeg" alt="Mini Photo 2">
+                <div class="mini-caption">Remember this day?</div>
+            </div>
+            <div class="mini-photo">
+                <img src="images/5.jpeg" alt="Mini Photo 3">
+                <div class="mini-caption">Great memories!</div>
+            </div>
+            <div class="mini-photo">
+                <img src="images/4.jpeg" alt="Mini Photo 4">
+                <div class="mini-caption">Best friends!</div>
+            </div>
+            <div class="mini-photo">
+                <img src="images/15.jpg" alt="Mini Photo 5">
+                <div class="mini-caption">Lucky to have you!</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/confetti-js/0.0.18/confetti.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
